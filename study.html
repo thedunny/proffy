@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt_br"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name= "theme-color" content="#8257E5">
+    <title>Proffy | Sua plataforma de estudos online</title>
+    <link rel="shortcut icon" href="/public/images/favicon.png" type= "image/png">
+    <link rel="stylesheet" href="/public/styles/main.css">
+    <link rel="stylesheet" href="/public/styles/partials/page-study.css">
+    <link rel="stylesheet" href="/public/styles/partials/forms.css">
+    <link rel="stylesheet" href="/public/styles/partials/header.css">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet">
+</head>
+<body id="page-study">
+    <div id = "container">
+       <header class="page-header">
+           <div class = "top-bar-container">
+               <a href="/">
+                    <img src="/public/images/icons/back.svg" alt="Voltar">
+                </a>
+                <img src="/public/images/logo.svg" alt="Proffy">
+           </div>
+           <div class="header-content">
+               <strong>Esses são os proffys disponíveis.</strong>
+               <form id="search-teachers">
+                <div class="select-block">
+                    <label for="subject">Matéria</label>
+                    <select name="subject" id="subject">
+                        <option value="" disabled="" hidden="">Selecione uma opção</option>
+                        <option value = "Portugues">Português</option>
+                        <option value = "Matematica">Matematica</option>
+                        <option value = "Biologia">Biologia</option>
+                        <option value = "Quimica">Quimica</option>
+                        <option value = "Fisica">Fisica</option>
+                        <option value = "Geografia">Geografia</option>
+                        <option value = "História">História</option>
+                        <option value = "Espanhol">Espanhol</option>
+                        <option value = "Ingles">Inglês</option>
+                    </select>
+                </div>
+                <div class="select-block">
+                    <label for="weekday">Dia da semana</label>
+                    <select name="weekday" id="weekday">
+                        <option value = "Segunda">Segunda-feira</option>
+                        <option value = "Terca">Terça-feira</option>
+                        <option value = "Quarta">Quarta-feira</option>
+                        <option value = "Quinta">Quinta-feira</option>
+                        <option value = "Sexta">Sexta-feira</option>
+                        <option value = "Sabado">Sabado</option>
+                        <option value = "Domingo">Domingo</option>
+                    </select>
+                </div>
+                <div class="input-block">
+                    <label for="time">Hora</label>
+                    <input name="time" id="time" type="time" value="{{filters.time}}" >
+                </div>
+                <button type="submit">Filtrar</button>
+            </form>
+           </div>
+       </header>
+
+       <main>
+
+        <article class="teacher-item">
+            <header>
+                <img src="https://avatars1.githubusercontent.com/u/43339347?s=460&u=aab4e10d7fcebfec244a124bb5feffea3589821c&v=4" alt="Avatar">
+                <div>
+                    <strong>Danielle</strong>
+                    <span>Matemática</span>
+                </div>
+            </header>
+        
+            <p>Entusiasta das melhores tecnologias de química avançada. Apaixonado por explodir coisas em laboratório e por mudar a vida das pessoas através de experiências. Mais de 200.000 pessoas já passaram por uma das minhas explosões.</p>
+            <footer>
+                <p>Preço/hora<strong>R$20,00</strong>
+                </p>
+                <a href="https://api.whatsapp.com/send?1=pt_BR&phone=55{{proffy.whatsapp}}&text=Tenho interesse na sua aula de {{proffy.subject}} {{proffy.name}}"
+                class="button" target= "_blank">
+                    <img src="/public/images/icons/whatsapp.svg" alt="Whatsapp">Entrar em contato
+                </a>
+            </footer>
+        </article>
+        <article class="teacher-item">
+            <header>
+                <img src="https://avatars1.githubusercontent.com/u/43339347?s=460&u=aab4e10d7fcebfec244a124bb5feffea3589821c&v=4" alt="Avatar">
+                <div>
+                    <strong>Danielle</strong>
+                    <span>Matemática</span>
+                </div>
+            </header>
+        
+            <p>Entusiasta das melhores tecnologias de química avançada. Apaixonado por explodir coisas em laboratório e por mudar a vida das pessoas através de experiências. Mais de 200.000 pessoas já passaram por uma das minhas explosões.</p>
+            <footer>
+                <p>Preço/hora<strong>R$20,00</strong>
+                </p>
+                <a href="https://api.whatsapp.com/send?1=pt_BR&phone=55{{proffy.whatsapp}}&text=Tenho interesse na sua aula de {{proffy.subject}} {{proffy.name}}"
+                class="button" target= "_blank">
+                    <img src="/public/images/icons/whatsapp.svg" alt="Whatsapp">Entrar em contato
+                </a>
+            </footer>
+        </article>    
+            
+       </main>
+    </div>
+</body>
+</html>
